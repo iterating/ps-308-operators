@@ -26,10 +26,11 @@ function allDivisibleByX (numbr, divBy) {
 }
 const isDivisibleByX = [];
 for (let i = 0; i < numbers.length; i++) {
-  const element = numbers[i];
-  if (allDivisibleByX(element)) {
-    isDivisibleByX.push(element);
+  if (allDivisibleByX(numbers[i])) {
+    isDivisibleByX.push(numbers[i]);
   }
+  console.log(typeof(i))
+  console.log( numbers[3])
 }
 console.log(`All numbers divisible by ${divBy}: ${isDivisibleByX}`);
 
@@ -61,9 +62,9 @@ let mph, efficiency, gallonsNeeded, totalFuelCost, tripDuration
 
 mph = 55
 efficiency = 30
-gallonsNeeded = (tripDistance / efficiency)
-totalFuelCost = (gallonsNeeded * costPerGallon)
-tripDuration = (tripDistance / mph)
+gallonsNeeded = (tripDistance / efficiency).toFixed(2)
+totalFuelCost = (gallonsNeeded * costPerGallon).toFixed(2)
+tripDuration = (tripDistance / mph).toFixed(2)
 
 console.log("at 55 MPH:");
 console.log(`Gas Needed: ${gallonsNeeded} gallons`);
